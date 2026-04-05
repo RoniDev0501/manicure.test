@@ -197,31 +197,32 @@ img {
 
   /* ABRE MENU AO CLICAR */
   #menu-toggle:checked + .menu-icon + .menu {
-    display: flex;
+     display: flex;
   }
 
   /* ICONES EMPILHADOS */
   .icones {
-  flex-direction: column;
-  gap: 40px;
-  padding: 20px;
-}
+   flex-direction: column;
+   gap: 40px;
+   padding: 20px;
+ }
 
   /* PARALLAX MOBILE FIX */
  .parallax {
-  height: 45vh;              /* menor altura */
-  background-attachment: scroll;
-  background-position: center top;
-  background-size: cover;
-}
+   height: 45vh;              /* menor altura */
+   background-attachment: scroll;
+   background-position: center top;
+   background-size: cover;
+  }
 
-.icones a {
+ .icones a {
   margin: 0;   /* remove empurrão lateral */
-}
+ }
 
-.icones img {
-  width: 160px;
-  height: 160px;
+ .icones img {
+   width: 160px;
+   height: 160px;
+ }
 
   footer img {
     width: 30px;
@@ -229,6 +230,20 @@ img {
     border-radius: 50%;
     object-fit: cover;
     transition: 0.3s;
+ }
+
+ footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #333;
+    color: white;
+    font-size: 15px;
+    padding: 20px 16px; /* vertical | lateral */
+    flex-direction: column;
+    gap: 15px;
+  }
+
 }
 
 footer {
@@ -240,20 +255,6 @@ footer {
     padding: 30px;
     color: white;
     font-size: 15px;
-    gap: 30px; 
-}
-
-}
-
-footer {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    background-color: #333;
-    padding: 30px;
-    color: white;
-    font-size: 25px;
     gap: 30px; 
 }
 

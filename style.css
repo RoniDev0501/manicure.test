@@ -8,6 +8,8 @@
 
 html, body {
   overflow-x: hidden;
+  width: 100%;
+  margin: 0;
 }
 
 body {
@@ -43,14 +45,24 @@ h1 {
 }
 
 .parallax {
-  background-image: url("img/manic.edit.png"); /* sua imagem */
+  position: relative;
   height: 100vh;
   width: 100%;
-  background-attachment: fixed; /* ⭐ EFEITO PARALLAX */
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: cover;
+  overflow: hidden;
+}
 
+.parallax::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  background-image: url("img/manic.edit.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  /* desktop */
+  background-attachment: fixed;
 }
 
 .conteudo {
@@ -224,6 +236,11 @@ img {
     transform: translateZ(0);
   }
 
+  .parallax::before {
+   background-attachment: scroll;
+   transform: scale(1.15); /* efeito profundidade */
+  }
+
  .icones a {
   margin: 0;   /* remove empurrão lateral */
  }
@@ -242,12 +259,17 @@ img {
  }
 
   footer {
-    flex-direction: column;
-    padding: 20px 16px;
-    font-size: 15px;
-    gap: 15px;
-    margin: 20px;
+  flex-direction: column;
+  padding: 20px 12px;
+  font-size: 15px;
+  gap: 15px;
+  margin: 0;          /* ⭐ REMOVE QUEBRA */
+  width: 100%;
+
+  footer p {
+   text-align: center;
   }
+}
 
 }
 

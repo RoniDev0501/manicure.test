@@ -217,10 +217,11 @@ img {
 
   /* PARALLAX MOBILE FIX */
  .parallax {
-    height: 60vh;
+    min-height: 100vh;
     background-attachment: scroll;
-    background-position: center center;
+    background-position: center;
     background-size: cover;
+    transform: translateZ(0);
   }
 
  .icones a {
@@ -245,6 +246,7 @@ img {
     padding: 20px 16px;
     font-size: 15px;
     gap: 15px;
+    margin: 20px;
   }
 
 }

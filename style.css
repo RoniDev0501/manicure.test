@@ -36,8 +36,9 @@ header {
 main {
   width: 100%;
   max-width: 100vw;
-  overflow: hidden;
+  overflow-x: hidden;  /* ✅ só horizontal */
 }
+
 
 h1 {
   -webkit-background-clip: text;
@@ -61,15 +62,15 @@ h1 {
   isolation: isolate;
 }
 
-.parallax::before {
-  content:"";
-  position:absolute;
-  inset:0;
-  background-image:url("img/manic.edit.png");
-  background-position:center;
-  background-size:cover;
-  background-repeat:no-repeat;
-  background-attachment:fixed;
+.parallax-bg {
+  position: absolute;
+  inset: -20%;
+  background-image: url("img/manic.edit.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;  /* ✅ efeito parallax no desktop */
+  will-change: transform;
 }
 
 .conteudo {
@@ -196,6 +197,12 @@ img {
     position: relative;
   }
 
+  main {
+   width: 100%;
+   max-width: 100vw;
+   overflow-x: hidden;  /* ✅ só bloqueia horizontal, deixa scroll vertical livre */
+ }
+
   .menu {
    position: absolute;
     top: 70px;
@@ -243,12 +250,10 @@ img {
    overflow:hidden;
    height:70vh;
   }
-  .parallax::before{
-    background-attachment:scroll;
-    transform:scale(1.2); /* efeito visual suave */
-
-}
-
+  .parallax-bg {
+    background-attachment: scroll;  /* ✅ necessário no mobile */
+    inset: -20%;                    /* mantém margem pro JS mover */
+  }
 
 .parallax img{
   position:absolute;

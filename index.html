@@ -9,6 +9,7 @@
     <link rel="icon" href="favicon.ico">
     <link rel="shortcut icon" href="favicon.ico">
 </head>
+
 <body>
     
        
@@ -37,7 +38,9 @@
      <a href="pagina1.html"> <img src="img/img.gpt.png" alt="Imagem principal" class="hero-img"> </a>
       <h1>"Emilly's Manicure - cuidado que você sente, beleza que você vê"</h1>
 
-      <section class="parallax"></section>
+      <section class="parallax">
+         <div class="parallax-bg" id="parallax-bg"></div>
+      </section>
 
      <div class="icones">
           <div class="item-servico">
@@ -73,6 +76,23 @@
       </div>
       <p><strong>Development For @ronidev0501</strong></p>
    </footer>
+
+   <script>
+        const bg = document.getElementById('parallax-bg');
+
+        // Só roda o JS no mobile
+        if (window.innerWidth <= 768) {
+            window.addEventListener('scroll', () => {
+            const scrollY = window.scrollY;
+            const section = bg.parentElement;
+            const offsetTop = section.offsetTop;
+            const speed = 0.3;
+
+            const move = (scrollY - offsetTop) * speed;
+            bg.style.transform = `translateY(${move}px)`;
+            });
+        }
+ </script>
 
 </body>
 </html>

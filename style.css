@@ -329,8 +329,8 @@ footer {
   padding: 12px 20px;   /* ← era 35px */
   color: white;
   font-size: 14px;      /* ← era 40px */
-  gap: 40px;            /* ← era 50px */
-} 
+  gap: 45px;            /* ← era 50px */
+}  
 
   .social-group {
     display: flex;

@@ -75,9 +75,8 @@ h1 {
 
 .roni {
     justify-content: center;
-    
-
 }
+
 .conteudo {
   height: 500px;
   background: white;
@@ -338,8 +337,8 @@ footer img:hover {
     }
 
  .icones img {
-   width: 45px;
-        height: 45px;
+   width: 60px;
+        height: 60px;
     border-radius: 50%;
     object-fit: cover;   /* ← garante que a imagem preenche sem distorcer */
     aspect-ratio: 1 / 1; /* ← força proporção quadrada */
@@ -398,7 +397,7 @@ footer img:hover {
   }
 
   footer p {
-    font-size: 9px !important;  /* Diminuído para garantir que caiba */
+    font-size: 16px !important;  /* Diminuído para garantir que caiba */
     margin: 0;
     white-space: nowrap;        /* Impede a quebra de linha que vimos na imagem */
     color: white;
@@ -433,6 +432,10 @@ footer img:hover {
 
   .nome-completo {
     display: block; /* ← garante que o nome aparece */
+  }
+
+  .dev-text {
+    display: none;
   }
 
 }
